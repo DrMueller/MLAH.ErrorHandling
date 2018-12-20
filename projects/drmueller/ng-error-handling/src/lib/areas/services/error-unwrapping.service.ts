@@ -25,7 +25,6 @@ export class ErrorUnwrappingService {
 
     return error;
   }
-
   private createFromServerError(error: any): any {
     if (error.hasOwnProperty('Message') && error.hasOwnProperty('StackTrace') && error.hasOwnProperty('TypeName')) {
       const err = new Error(error.Message);
