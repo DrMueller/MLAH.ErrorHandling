@@ -11,7 +11,7 @@ import { ErrorInformation } from '../models';
 @Injectable({
   providedIn: 'root'
 })
-export class CustomErrorHandlerService implements ErrorHandler {
+export class CustomErrorHandlerService {
 
   public constructor(
     private errorUnwrappingService: ErrorUnwrappingService,

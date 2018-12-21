@@ -17,6 +17,10 @@ export class ErrorUnwrappingService {
       error = error.json();
     }
 
+    if (error.hasOwnProperty('body')) {
+      error = error.body;
+    }
+
     while (error.hasOwnProperty('error') && !!error.error) {
       error = error.error;
       // If it is a Error from the ErrorHandlingMiddleware on the Server, we create a client version of it here.
@@ -25,6 +29,7 @@ export class ErrorUnwrappingService {
 
     return error;
   }
+
   private createFromServerError(error: any): any {
     if (error.hasOwnProperty('Message') && error.hasOwnProperty('StackTrace') && error.hasOwnProperty('TypeName')) {
       const err = new Error(error.Message);
