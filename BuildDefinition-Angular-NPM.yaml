@@ -34,7 +34,7 @@ steps:
 
     customCommand: 'run ci-unit-test-lib'
 
-    disabled: true
+    enabled: false
 
   
 - task: Npm@1
