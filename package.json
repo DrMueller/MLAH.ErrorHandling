@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "test-lib": "ng test @drmueller/ng-error-handling",
     "test-lib-headless": "ng test @drmueller/ng-error-handling --browsers=ChromeHeadless --watch=false",
-    "ci-build-lib-prod": "ng build @drmueller/ng-error-hanling --prod",
+    "ci-build-lib-prod": "ng build @drmueller/ng-error-handling --prod",
     "ci-unit-test-lib": "ng run @drmueller/ng-error-handling:unit-test"
   },
   "private": true,
