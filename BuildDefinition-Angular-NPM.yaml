@@ -34,9 +34,7 @@ steps:
 
     customCommand: 'run ci-unit-test-lib'
 
-    enabled: false
-
-  
+    
 - task: Npm@1
   displayName: 'NPM Build Prod'
   inputs:
