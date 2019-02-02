@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule, MatButtonModule } from '@angular/material';
 
 import * as components from './components';
-import * as services from './services';
+import { CustomErrorHandlerService } from './services/custom-error-handler.service';
+import { IgnoredErrorsService } from './services/ignored-errors.service';
+import { ErrorUnwrappingService } from './services/error-unwrapping.service';
+import { ErrorInformationFactoryService } from './services/error-information-factory.service';
 
 @NgModule({
   imports: [
@@ -27,10 +30,10 @@ export class ErrorHandlingModule {
     return {
       ngModule: ErrorHandlingModule,
       providers: [
-        { provide: ErrorHandler, useClass: services.CustomErrorHandlerService },
-        services.ErrorUnwrappingService,
-        services.IgnoredErrorsService,
-        services.ErrorInformationFactoryService
+        { provide: ErrorHandler, useClass: CustomErrorHandlerService },
+        ErrorUnwrappingService,
+        IgnoredErrorsService,
+        ErrorInformationFactoryService
       ]
     };
   }
