@@ -2,13 +2,14 @@ import { NgZone } from '@angular/core';
 import { inject, TestBed } from '@angular/core/testing';
 import { MatDialog } from '@angular/material';
 
-import { provideMock, spyOnClass } from '@drmueller/testing';
+import { provideMock } from '@drmueller/testing';
 
-import { ErrorInformationFactoryService, ErrorUnwrappingService, IgnoredErrorsService } from './';
 import { CustomErrorHandlerService } from './custom-error-handler.service';
+import { ErrorUnwrappingService } from './error-unwrapping.service';
+import { IgnoredErrorsService } from './ignored-errors.service';
+import { ErrorInformationFactoryService } from './error-information-factory.service';
 
 describe('CustomErrorHandlerService', () => {
-  const zoneMock = spyOnClass(NgZone);
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -17,7 +18,7 @@ describe('CustomErrorHandlerService', () => {
         provideMock(IgnoredErrorsService),
         provideMock(ErrorInformationFactoryService),
         provideMock(MatDialog),
-        zoneMock,
+        provideMock(NgZone),
         CustomErrorHandlerService
       ]
     });
