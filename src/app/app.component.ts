@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CustomErrorHandlerService } from 'projects/drmueller/ng-error-handling/src/lib/areas';
 
 @Component({
   selector: 'app-root',

@@ -1,12 +1,12 @@
-import { ModuleWithProviders, NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDialogModule, MatButtonModule } from '@angular/material';
+import { ErrorHandler, ModuleWithProviders, NgModule } from '@angular/core';
+import { MatButtonModule, MatDialogModule } from '@angular/material';
 
-import * as components from './components';
 import { CustomErrorHandlerService } from './services/custom-error-handler.service';
-import { IgnoredErrorsService } from './services/ignored-errors.service';
-import { ErrorUnwrappingService } from './services/error-unwrapping.service';
 import { ErrorInformationFactoryService } from './services/error-information-factory.service';
+import { ErrorUnwrappingService } from './services/error-unwrapping.service';
+import { IgnoredErrorsService } from './services/ignored-errors.service';
+import { ErrorDisplayComponent } from './components/error-display/error-display.component';
 
 @NgModule({
   imports: [
@@ -15,13 +15,13 @@ import { ErrorInformationFactoryService } from './services/error-information-fac
     CommonModule
   ],
   entryComponents: [
-    components.ErrorDisplayComponent
+    ErrorDisplayComponent
   ],
   declarations: [
-    components.ErrorDisplayComponent
+    ErrorDisplayComponent
   ],
   exports: [
-    components.ErrorDisplayComponent
+    ErrorDisplayComponent
   ]
 })
 

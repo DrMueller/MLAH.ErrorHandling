@@ -4,9 +4,9 @@ import { ErrorInformationFactoryService } from './error-information-factory.serv
 import { ErrorUnwrappingService } from './error-unwrapping.service';
 import { IgnoredErrorsService } from './ignored-errors.service';
 
-import { ErrorDisplayComponent } from '../components';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ErrorInformation } from '../models';
+import { ErrorDisplayComponent } from '../components/error-display/error-display.component';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +38,7 @@ export class CustomErrorHandlerService {
     config.data = errorInformation;
     config.disableClose = true;
 
-    // Zone is needed, since the ErrorHandler is called outsideof the changedetection zone
+    // Zone is needed, since the ErrorHandler is called outside of the changedetection zone
     // See: https://github.com/angular/material2/issues/7550
     this.ngZone.run(() => {
       this.dialog.open(ErrorDisplayComponent, config);
