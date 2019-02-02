@@ -149,6 +149,14 @@
             "karmaConfig": "projects/drmueller/ng-error-handling/karma.conf.js"
           }
         },
+        "ci-unit-test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/drmueller/ng-error-handling/src/test.ts",
+            "tsConfig": "projects/drmueller/ng-error-handling/tsconfig.spec.json",
+            "karmaConfig": "projects/drmueller/ng-error-handling/karma-ci.conf.js"
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
