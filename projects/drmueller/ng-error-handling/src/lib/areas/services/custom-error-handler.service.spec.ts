@@ -1,4 +1,3 @@
-import { NgZone } from '@angular/core';
 import { inject, TestBed } from '@angular/core/testing';
 import { MatDialog } from '@angular/material';
 
@@ -18,7 +17,6 @@ describe('CustomErrorHandlerService', () => {
         provideMock(IgnoredErrorsService),
         provideMock(ErrorInformationFactoryService),
         provideMock(MatDialog),
-        provideMock(NgZone),
         CustomErrorHandlerService
       ]
     });
