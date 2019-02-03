@@ -39,6 +39,6 @@ describe('ErrorDisplayComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeFalsy();
+    expect(component).toBeTruthy();
   });
 });
