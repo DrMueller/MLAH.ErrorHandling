@@ -34,14 +34,13 @@ steps:
 
     customCommand: 'run ci-unit-test-lib'
 
-  continueOnError: true
-
 
 - task: PublishTestResults@2
   displayName: 'Publish Unit Tests Result'
   inputs:
     testResultsFiles: '**/testresults/unit-tests.xml'
-    failOnStandardError: 'true'
+
+  condition: succeededOrFailed()
 
     
 - task: Npm@1
