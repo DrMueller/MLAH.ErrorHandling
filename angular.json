@@ -154,7 +154,7 @@
           "options": {
             "main": "projects/drmueller/ng-error-handling/src/test.ts",
             "tsConfig": "projects/drmueller/ng-error-handling/tsconfig.spec.json",
-            "karmaConfig": "projects/drmueller/ng-error-handling/karma-ci.conf.js"
+            "karmaConfig": "projects/drmueller/ng-error-handling/karma-ci-unit-tests.conf.js"
           }
         },
         "lint": {
