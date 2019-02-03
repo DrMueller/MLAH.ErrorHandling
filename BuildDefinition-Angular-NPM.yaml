@@ -49,6 +49,9 @@ steps:
     verbose: false
 
     customCommand: 'run ci-build-lib-prod'
+    
+  continueOnError: true
+
 
 
 - task: Npm@1
