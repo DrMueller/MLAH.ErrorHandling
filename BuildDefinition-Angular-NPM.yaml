@@ -33,7 +33,7 @@ steps:
     verbose: false
 
     customCommand: 'run ci-unit-test-lib'
-    
+
   continueOnError: true
 
 
@@ -41,6 +41,7 @@ steps:
   displayName: 'Publish Unit Tests Result'
   inputs:
     testResultsFiles: '**/testresults/unit-tests.xml'
+    failOnStandardError: 'true'
 
     
 - task: Npm@1
