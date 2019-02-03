@@ -33,6 +33,8 @@ steps:
     verbose: false
 
     customCommand: 'run ci-unit-test-lib'
+    
+  continueOnError: true
 
 
 - task: PublishTestResults@2
@@ -49,9 +51,6 @@ steps:
     verbose: false
 
     customCommand: 'run ci-build-lib-prod'
-    
-  continueOnError: true
-
 
 
 - task: Npm@1
