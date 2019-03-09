@@ -3,7 +3,7 @@ name: 2.1$(rev:.r) # build numbering format
 resources:
   repo: self
   repositories:
-    - repository: ALMStuff
+  - repository: ALMStuff
     type: github
     name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
     ref: refs/heads/master
