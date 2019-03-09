@@ -6,8 +6,9 @@ resources:
     ref: refs/heads/master
     endpoint: GitHub-DrMueller
 
-pool: pool # see pool schema
-
+pool:
+  vmImage: Hosted VS2017
+  
 steps:
 - template: AzureDevOps/StepTemplates/Angular/Library-Build.yaml@ALMStuff
   parameters:
