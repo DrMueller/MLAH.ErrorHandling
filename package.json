@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci-build-lib-prod": "ng build @drmueller/ng-error-handling --prod",
-    "ci-unit-test-lib": "ng run @drmueller/ng-error-handling:unit-test",
-    "ci-integration-test-lib": "ng run @drmueller/ng-error-handling:integration-test",
-    "ci-lint-lib": "tslint --project projects/drmueller/ng-error-handling/tslint.json --format junit --out projects/drmueller/ng-error-handling/testresults/lint-tests.xml",
-    "local-unit-test-lib": "ng test @drmueller/testing"
+    "ci-build-prod": "ng build @drmueller/ng-error-handling --prod",
+    "ci-unit-test": "ng run @drmueller/ng-error-handling:unit-test",
+    "ci-integration-test": "ng run @drmueller/ng-error-handling:integration-test",
+    "ci-lint": "tslint --project projects/drmueller/ng-error-handling/tslint.json --format junit --out projects/drmueller/ng-error-handling/testresults/lint-tests.xml",
+    "local-unit-test": "ng test @drmueller/testing"
   },
   "private": true,
   "dependencies": {
