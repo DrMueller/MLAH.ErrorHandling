@@ -6,11 +6,10 @@ resources:
     - repository: ALMStuff
       type: github
       name: AzureDevOps/JobTemplates/Angular
+      endpoint: GitHub-DrMueller
 queue:
   name: Hosted VS2017
   demands: npm
-  
-
 
 steps:
 - template: Angular-NPM@templates
