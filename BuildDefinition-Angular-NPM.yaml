@@ -11,7 +11,7 @@ queue:
   name: Hosted VS2017
   demands: npm
 
-steps:
+jobs:
 - template: Angular-NPM.yaml@ALMStuff
   parameters:
     LibraryName: 'ng-error-handling'
