@@ -5,7 +5,7 @@ resources:
 - repositories:
     - repository: ALMStuff
       type: github
-      name: AzureDevOps/JobTemplates/Angular
+      name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
       endpoint: GitHub-DrMueller
 queue:
   name: Hosted VS2017
