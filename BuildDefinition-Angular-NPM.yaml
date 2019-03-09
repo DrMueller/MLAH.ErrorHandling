@@ -1,15 +1,5 @@
-name: 2.1$(rev:.r) # build numbering format
-
 resources:
-  repositories:
-  - repository: ALMStuff
-    type: github
-    name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
-    ref: refs/heads/master
-    endpoint: GitHub-DrMueller
-queue:
-  name: Hosted VS2017
-  demands: npm
+- repo: self
 
 jobs:
 
@@ -21,3 +11,10 @@ jobs:
   steps:
   - task: DotNetCoreCLI@2
     displayName: 'dotnet build'
+
+
+- job: Job_2
+  displayName: test123
+  condition: succeeded()
+  pool:
+    name: Default
