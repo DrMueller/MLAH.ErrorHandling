@@ -1,6 +1,6 @@
 resources:
 - repo: self
-  repositories:
+- repositories:
   - repository: ALMStuff
     type: github
     name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
