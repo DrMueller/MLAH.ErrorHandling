@@ -7,7 +7,7 @@ resources:
     endpoint: GitHub-DrMueller
 
 steps:
-- template: AzureDevOps/StepTemplates/Angular/Library-Build.yaml@ALMStuff
+- template: AzureDevOps/StepTemplates/Angular/Library/Build.yaml@ALMStuff
   parameters:
     LibraryName: 'ng-error-handling'
     ExecuteIntegrationTests: false
