@@ -2,12 +2,12 @@ resources:
  repositories:
   - repository: ALMStuff
     type: github
-    name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
+    name: DrMueller/ALMStuff
     ref: refs/heads/master
     endpoint: GitHub-DrMueller
 
 jobs:
-- template: Angular-Build-Push-NPM.yaml@ALMStuff
+- template: AzureDevOps/JobTemplates/Angular/Angular-Build-Push-NPM.yaml@ALMStuff
   parameters:
     LibraryName: 'ng-error-handling'
     ExecuteIntegrationTests: false
