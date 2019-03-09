@@ -3,10 +3,11 @@ name: 2.1$(rev:.r) # build numbering format
 resources:
 - repo: self
 - repositories:
-    - repository: ALMStuff
-      type: github
-      name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
-      endpoint: GitHub-DrMueller
+  - repository: ALMStuff
+    type: github
+    name: DrMueller/ALMStuff/AzureDevOps/JobTemplates/Angular
+    ref: refs/heads/master
+    endpoint: GitHub-DrMueller
 queue:
   name: Hosted VS2017
   demands: npm
