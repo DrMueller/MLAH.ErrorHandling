@@ -6,8 +6,8 @@ resources:
     ref: refs/heads/master
     endpoint: GitHub-DrMueller
 
-steps:
-- template: AzureDevOps/StepTemplates/Angular/Library/Build.yaml@ALMStuff
+jobs:
+- template: AzureDevOps/JobTemplates/Angular/Library/NPM-CI.yaml@ALMStuff
   parameters:
     LibraryName: 'ng-error-handling'
     ExecuteIntegrationTests: false
