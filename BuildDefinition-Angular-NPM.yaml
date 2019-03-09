@@ -1,6 +1,7 @@
 name: 2.1$(rev:.r) # build numbering format
 
 resources:
+- repo: self
   repositories:
     - repository: templates
       type: github
