@@ -8,10 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test-lib": "ng test @drmueller/ng-error-handling",
-    "test-lib-headless": "ng test @drmueller/ng-error-handling --browsers=ChromeHeadless --watch=false",
-    "ci-build-lib-prod": "ng build @drmueller/ng-error-handling --prod",
-    "ci-unit-test-lib": "ng run @drmueller/ng-error-handling:ci-unit-test"
+    "ci-build-lib-prod": "ng build @drmueller/ng-base-services --prod",
+    "ci-unit-test-lib": "ng run @drmueller/ng-base-services:unit-test",
+    "ci-integration-test-lib": "ng run @drmueller/ng-base-services:integration-test",
+    "ci-lint-lib": "tslint --project projects/drmueller/ng-base-services/tslint.json --format junit --out projects/drmueller/ng-base-services/testresults/lint-tests.xml",
+    "local-unit-test-lib": "ng test @drmueller/testing"
   },
   "private": true,
   "dependencies": {
