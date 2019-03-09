@@ -1,16 +1,15 @@
 name: 2.1$(rev:.r) # build numbering format
 
 resources:
-  repositories:
-    - repository: ALMStuff
-      type: github
-      name: AzureDevOps/JobTemplates/Angular
-
-resources:
 - repo: self
 queue:
   name: Hosted VS2017
   demands: npm
+repositories:
+- repository: ALMStuff
+  type: github
+  name: AzureDevOps/JobTemplates/Angular
+
 
 steps:
 - template: Angular-NPM@templates
