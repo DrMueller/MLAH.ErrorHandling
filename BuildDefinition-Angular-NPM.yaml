@@ -13,7 +13,11 @@ queue:
 
 jobs:
 
-- template: templates/npm-with-params.yml  # Template reference
-  parameters:
-    name: Linux
-    vmImage: 'ubuntu-16.04'
+- job: Job_1
+  displayName: hello
+  condition: succeeded()
+  pool:
+    name: Default
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet build'
