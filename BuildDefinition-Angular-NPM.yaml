@@ -10,4 +10,4 @@ jobs:
 - template: AzureDevOps/JobTemplates/Angular/Angular-Build-Push-NPM.yaml@ALMStuff
   parameters:
     LibraryName: 'ng-error-handling'
-    ExecuteIntegrationTests: false
+    ExecuteIntegrationTests: true
