@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ci-build-prod": "ng build @drmueller/ng-error-handling --prod",
-    "ci-unit-test": "ng run @drmueller/ng-error-handling:unit-test",
-    "ci-integration-test": "ng run @drmueller/ng-error-handling:integration-test",
+    "ci-unit-test": "ng run @drmueller/ng-error-handling:ci-unit-test",
+    "ci-integration-test": "ng run @drmueller/ng-error-handling:ci-integration-test",
     "ci-lint": "tslint --project projects/drmueller/ng-error-handling/tslint.json --format junit --out projects/drmueller/ng-error-handling/testresults/lint-tests.xml",
     "local-unit-test": "ng test @drmueller/testing"
   },
