@@ -9,7 +9,7 @@ resources:
     endpoint: GitHub-DrMueller
 
 variables:
-  LibraryName: 'ng-data-access'
+  LibraryName: 'ng-error-handling'
   ExecuteIntegrationTests: false 
 
 jobs:
