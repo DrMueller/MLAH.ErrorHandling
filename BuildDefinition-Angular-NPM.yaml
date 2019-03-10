@@ -13,17 +13,17 @@ resources:
     endpoint: GitHub-DrMueller
 
 variables:
-  libraryName: 'ng-data-access'
-  executeIntegrationTests: false 
+  LibraryName: 'ng-data-access'
+  ExecuteIntegrationTests: false 
 
 steps:
 - template: AzureDevOps/Templates/StepTemplates/Angular/Initialize_And_Test.yaml@ALMStuff
   parameters:
-    executeIntegrationTests: $(executeIntegrationTests)
+    ExecuteIntegrationTests: $(ExecuteIntegrationTests)
 - template: AzureDevOps/Templates/StepTemplates/Angular/Build_Production.yaml@ALMStuff
 - template: AzureDevOps/Templates/StepTemplates/Angular/Update_Version.yaml@ALMStuff
   parameters:
-    libraryName: $(libraryName)
+    LibraryName: $(LibraryName)
 - template: AzureDevOps/Templates/StepTemplates/Angular/Publish_NPM.yaml@ALMStuff
   parameters:
-    libraryName: $(libraryName)
+    LibraryName: $(LibraryName)
