@@ -12,6 +12,7 @@ import { ErrorDisplayComponent } from '../components/error-display/error-display
   providedIn: 'root'
 })
 export class CustomErrorHandlerService {
+  private _previousError: any;
 
   public constructor(
     private errorUnwrappingService: ErrorUnwrappingService,
@@ -22,6 +23,12 @@ export class CustomErrorHandlerService {
   }
 
   public handleError(error: any): void {
+    if (this.checkIsSameAsPreviousError(error)) {
+      return;
+    }
+
+    this._previousError = error;
+
     const unpackedError = this.errorUnwrappingService.unwrapError(error);
     console.log(unpackedError);
 
@@ -43,5 +50,9 @@ export class CustomErrorHandlerService {
     this.ngZone.run(() => {
       this.dialog.open(ErrorDisplayComponent, config);
     });
+  }
+
+  private checkIsSameAsPreviousError(error: any): boolean {
+    return this._previousError && error.stack === this._previousError.stack && error.message === this._previousError.message;
   }
 }
